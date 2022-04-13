@@ -1,0 +1,34 @@
+# === Nodes ===
+
+[telegram.bot]
+Token="YOUR_TOKEN_GOES_HERE"
+RemoteNickFormat="[{PROTOCOL}] @{NICK}: "
+MessageFormat="HTMLNick"
+
+[whatsapp.bot]
+# edit number
+Number="491709999999"
+QrOnWhiteTerminal=false
+RemoteNickFormat="[{PROTOCOL}] @{NICK}: "
+
+# Sample Conf connects 2 Whatsapp Groups and 1 Telegram Group
+
+# === Gateways ===
+[[gateway]]
+name="NAME_OF_GATEWAY"
+enable=true
+
+        [[gateway.inout]]
+        account="whatsapp.bot"
+        channel="491709999999-1631617594@g.us"
+        #channel="THE_JID_OF_YOUR_CHAT_OR_GROUP"
+
+        [[gateway.inout]]
+        account="whatsapp.bot"
+        channel="491709999999-1633300719@g.us"
+        #channel="THE_JID_OF_YOUR_CHAT_OR_GROUP"
+
+        [[gateway.inout]]
+        account="telegram.bot"
+        channel="-100157000000"
+        #channel="THE_ID_OF_YOUR_TELEGRAM_CHANNEL"

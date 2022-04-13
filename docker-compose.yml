@@ -1,0 +1,8 @@
+version: "3.3"  # optional since v1.27.0
+services:
+  matterbridge:
+    build: .
+    volumes:
+      - ./matterbridge:/etc/matterbridge
+    restart: always   
+ 
